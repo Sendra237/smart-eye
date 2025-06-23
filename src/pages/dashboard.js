@@ -4,11 +4,16 @@ import { Bell, Video, Users, Clock, Settings, LogOut, LayoutDashboard, History, 
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+const [sidebarOpen, setSidebarOpen] = React.useState(false);
+const [alertsOpen, setAlertsOpen] = React.useState(false);
 
   return (
     <div className="dashboard-container">
       {/* Sidebar */}
-      <aside className="sidebar">
+
+
+     <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+
         <div className="school-name bold">COLLEGE MONGO BETI</div>
         <div className="school-address">
             <img src="./img/location Icon.svg" />
@@ -91,7 +96,8 @@ const Dashboard = () => {
         </main>
 
         {/* Alertes */}
-        <aside className="alerts-panel">
+        <aside className={`alerts-panel ${alertsOpen ? "open" : ""}`}>
+
           <div className="alerts-header">
             <h2 className="section-title bold">Alerts</h2>
             <div className="alert-buttons">

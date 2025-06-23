@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import "./login.css";
 import "./dashboard.css";
+// import "./dashboardmobile.css";
 import "./popups.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
